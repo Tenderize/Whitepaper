@@ -1,4 +1,22 @@
-# Tender Protocol 
+# Tender Protocol
+
+## Table of Contents
+
+1. [**Introduction**](#1-Introduction)
+2. [**Problem Statement**](#2-Problem-Statement)
+3. [**Solution**](#3-Solution)
+4. [**Technical Architecture**](#4-Technical-Architecture)
+    1.   [TenderTokens](#41-TenderTokens)
+    2.   [Tenderizer](#42-Tenderizer)
+    3.   [Elastic Supply Pool](#43-Elastic-Supply-Pool)
+    4.   [TenderFarm](#44-TenderFarm)
+5. [**Protocol Economics**](#5-Protocol-Economics)
+    1. [Governance Fee](#51-Governance-Fee)
+    2. [Liquidity Fee](#52-Liquidity-Fee)
+    3. [Swap Fee](#53-Swap-Fee)
+    4. [Emergency Exit](#54-Emergency-Exit)
+6. [**User Stories**](#6-User-Stories)
+    1. [General](#61-General)
 
 ## 1. Introduction 
 
