@@ -73,13 +73,13 @@ Each staking pool will have its own liquid ('tender') derivative called TenderTo
     - Alice: 75 tenderSTEAK
     - Bob: 25 tenderSTEAK
 3. Protocol earns 40 STEAK in rewards
-    - Total value Locked: 120 STEAK
+    - Total value Locked: 140 STEAK
     - Tender Supply: 100 tenderSTEAK
     - Alice: 75 tenderSTEAK
     - Bob: 25 tenderSTEAK
 4. Atomically with step 3, the Protocol rebases the tenderSTEAK supply to match the STEAK TVL
-    - Total value Locked: 120 STEAK
-    - Tender Supply: 120 tenderSTEAK
+    - Total value Locked: 140 STEAK
+    - Tender Supply: 140 tenderSTEAK
     - Alice: 75 tenderSTEAK + 30 tenderSTEAK = 105 tenderSTEAK
     - Bob: 25 tenderSTEAK + 10 tenderSTEAK = 35 tenderSTEAK
 
