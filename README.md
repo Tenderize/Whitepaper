@@ -1,3 +1,4 @@
+
 # Tender Protocol
 
 ## Table of Contents
@@ -46,7 +47,7 @@ TenderTokens can be transferred freely, traded on decentralised exchanged or use
 - ElasticSupplyPool (liquidity pool)
 - TenderFarm
 
-![](https://i.imgur.com/3puoJxO.png)
+![](https://user-images.githubusercontent.com/63185771/130828326-7c51078f-38d9-4aff-8c58-46d8f7160f6e.JPG)
 
 
 
