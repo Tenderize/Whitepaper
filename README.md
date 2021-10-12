@@ -16,8 +16,9 @@
     2. [Liquidity Fee](#52-Liquidity-Fee)
     3. [Swap Fee](#53-Swap-Fee)
     4. [Emergency Exit](#54-Emergency-Exit)
-6. [**User Stories**](#6-User-Stories)
-    1. [General](#61-General)
+6. [**Governance**](#6-Governance)
+    1.  [Overview](#61-Overview)
+    2.  [$TENDER Token](#62-$TENDER-Token)
 
 ## 1. Introduction 
 
@@ -150,12 +151,18 @@ Whenever possible (depending on the implementation details of the underlying pro
 This will burn their 'TenderTokens' and unlock their respective share of staked assets from the underlying protocol. 
 
 
-## 6. User Stories
+## 6. Governance
 
-### 6.1 General
-- Users should be able to stake assets and earn staking rewards
-- Users should be able to receive a 'TenderToken' derivative that they can use like any other ERC20 token.
-- Users should be able to redeem their staked assets without unstaking periods
-- Users should be able to provide liquidity to a liquidity pool of staked tokens and derivative 'TenderToken'
-- Users should be able to freely swap between staked tokens and 'TenderToken'
-- Users should be able to stake their liquidity pool shares to a yield farming contract to earn additional rewards
+### 6.1 Overview
+
+Administration and upgrades to the Tender protocol happen through the collective decision making of the Tenderize community. This can be adding new assets, changing global or tenderizer specific parameters, execute protocol upgrades, etc. While initially the protocol will be administered by a group of core team members and early contributers, we believe that ultimately Tenderize should be an unstoppable, community managed financial protocol.
+
+In a first stage proposals will be voted on off-chain as a signal to the protocol administration committee of which updates to execute. The administration committee will exist out of core team members and early contributers/investors. In the second stage proposals will be executable code and not signals or suggestions for a small set of key actors to follow through on.
+
+Participation in governance begins with the $TENDER token, which can be locked up to obtain voting rights. Voting rights can also be delegated to other actors that have voting rights. Through this community members can off-load some of their responsabilities to other community members that are able to make better informed decisions. Participants will receive a portion of the "Governance fee" from each of the Tenderizers equal to their share of $TENDER tokens that are eligible for voting rights.
+
+We believe in rewarding active participation so incentives should be aligned accordingly, users that vote more often and with more conviction (measured by locking up voting power to proposals longer) should result in more rewards as they have more skin in the game.
+
+### 6.2 $TENDER Token
+
+The $TENDER token is an ERC-20 token that empowers the management of the Tenderize protocol by the community. By locking up $TENDER tokens to acquire voting rights, holders gain the right to perform management duties for the protocol by creating or voting on proposals based on their own analysis and theses.
