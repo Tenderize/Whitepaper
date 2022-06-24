@@ -87,21 +87,21 @@ Each staking pool will have its own liquid ('tender') derivative called TenderTo
 
 ### 4.2 Tenderizer
 
-The Tenderizer contract is the bread and butter of the Tender Protocol, it's implementation is specific to each integration. It handles staking tokens and claiming rewards.
+The Tenderizer contract is the bread and butter of the Tender Protocol, its implementation is specific to each integration. It handles staking tokens and claiming rewards.
 
-In case there are protocol specific rewards that are not its native staking token they will be swapped on decentralised exchanges (e.g. uniswap) whitelisted by the protocol. This takes place without interference of outside actors and is fully automated by the smart contract.
+In the case that there are protocol specific rewards not native to the staking token, these will be swapped for the native staking token using decentralised exchanges that are whitelisted by the protocol (e.g. Uniswap). These swaps are fully automated by the smart contract, without intervention from outside actors.
 
-This contract is the only contract that is upgradeable in the first iteration of the protocol.
+The Tenderizer contract is the only contract that is upgradeable in the first iteration of the protocol.
 
 ### 4.3 Liquidity Pool
 
 Each supported integration will have its own liquidity pool through which tenderTokens can be swapped back and forth with their underlying tokens. 
 
-To avoid impermanent loss when the tenderToken supply is rebased the concept of *Elastic Supply Pools* is introduced. Impermanent loss occurs when the values of the assets within the pool deviate from one another. It is *impermanent* because the loss is nullified if the assets in the pool return to its original ratios. 
+To avoid impermanent loss when the tenderToken supply is rebased, the concept of *Elastic Supply Pools* is introduced. Impermanent loss occurs when the values of the assets within the pool deviate from one another. It is *impermanent* because the loss is nullified if the assets in the pool return to their original ratio. 
 
-A traditional liquidity pool wouldn't be aware of an event that changes the supply of the tenderTokens. In this case the tenderToken balance in the liquidity pool would change causing an impermanent loss as the tenderToken then trades at a discount or premium, depending on whether the supply contracts or expands. This change in balances within the pool causes impermanent loss and arbitrage occurs until the price reaches parity again. 
+A traditional liquidity pool wouldn't react to a change in the supply of the tenderTokens, causing the tenderToken balance in the liquidity pool to change. As the tenderToken then trades at a discount or premium, depending on whether the supply contracts or expands, liquidity providers are exposed to impermanent loss as arbitrage returns the price to parity. 
 
-The Tender Protocol smart contracts as creator of the liquidity pool will be able to resyncronise the weights within the pool as the sole actor. This will prevent the price from changing when the tenderToken balance of the liquidity pool expands or contracts. 
+The Tender Protocol smart contracts, as creator of the liquidity pool, will be able to resyncronise the weights within the pool as the sole actor. This will prevent the price from changing when the tenderToken balance of the liquidity pool expands or contracts. 
 
 e.g. 
 1. tenderSTEAK/STEAK liquidity pool has a 50/50 weight distribution
@@ -116,9 +116,9 @@ e.g.
 
 ### 4.4 TenderFarm
 
-To incentivise liquidity provision each integration will have it's own yield farming contract called a 'TenderFarm'. When users add liquidity to the Elastic Supply Pool they will receive ERC20 tokens representing their liquidity share of the pool. These tokens can be staked in the TenderFarm to earn rewards. 
+To incentivise liquidity provision, each integration will have its own yield farming contract called a 'TenderFarm.' When users add liquidity to the Elastic Supply Pool, they will receive ERC20 tokens representing their liquidity share of the pool. These tokens can be staked in the TenderFarm to earn rewards. 
 
-Because the Liquidity Pool exists partially of yield-generating 'TenderTokens', providing liquidity will already earn partial staking rewards relative to the token weight of the 'TenderToken' in the liquidity pool.
+Because the Liquidity Pool exists partially of yield-generating 'TenderTokens,' providing liquidity will already earn partial staking rewards relative to the token weight of the 'TenderToken' in the liquidity pool.
 
 Currently the rewards will be a percentage cut on the staking rewards earned by the Tenderizer. These rewards will be automatically added to the TenderFarm as the tender protocol earns staking rewards.
 
@@ -128,17 +128,17 @@ In the future these yield farming contracts could be expanded to also include di
 
 ### 5.1 Governance Fee
 
-An initial 2.5% of staking rewards will be deducted from the earned stkaing rewards by the 'Tenderizer' and assigned to the governance contract (a multisig initially) to fund protocol development, community grants, ... .
+An initial 2.5% of staking rewards will be deducted from the earned staking rewards by the 'Tenderizer' and assigned to the governance contract (a multisig initially) to fund protocol development, community grants, ... .
 
 This fee is only on rewards and never on principal deposits by users. Governance is thus incentivised to effectively manage the 'Tenderizer' for good performance. 
 
 ### 5.2 Liquidity Fee
 
-To bootstrap and retain liquidity an initial 7.5% of staking rewards will be assigned to users that provide liquidity and stake their liquidity pool shares in the 'TenderFarm'.
+To bootstrap and retain liquidity, an initial 7.5% of staking rewards will be assigned to users that provide liquidity and stake their liquidity pool shares in the 'TenderFarm'.
 
-Users that provide liquidity forgo staking rewards relative to the weight of the underlying staked assets in the liquidity pool so this opportunity cost needs to be offset with an incentive. 
+Users that provide liquidity forgo staking rewards, relative to the weight of the underlying staked assets in the liquidity pool, so this opportunity cost needs to be offset with an incentive. 
 
-While the total yield might still be lower than staking your entire balance straight up, providing liquidity caters to a different risk profile. Since part of the provided assets will still be the staked asset token these will be subject to less protocol risk.
+While the total yield might still be lower than staking your entire balance straight up, providing liquidity caters to a different risk profile. Since part of the provided assets will still be the staked asset token, these will be subject to less protocol risk.
 
 ### 5.3 Swap Fee
 
@@ -155,14 +155,14 @@ This will burn their 'TenderTokens' and unlock their respective share of staked 
 
 ### 6.1 Overview
 
-Administration and upgrades to the Tender protocol happen through the collective decision making of the Tenderize community. This can be adding new assets, changing global or tenderizer specific parameters, execute protocol upgrades, etc. While initially the protocol will be administered by a group of core team members and early contributers, we believe that ultimately Tenderize should be an unstoppable, community managed financial protocol.
+Administration and upgrades to the Tender protocol happen through the collective decision making of the Tenderize community. This can be adding new assets, changing global or Tenderizer specific parameters, execute protocol upgrades, etc. While initially the protocol will be administered by a group of core team members and early contributers, we believe that ultimately Tenderize should be an unstoppable, community managed financial protocol.
 
-In a first stage proposals will be voted on off-chain as a signal to the protocol administration committee of which updates to execute. The administration committee will exist out of core team members and early contributers/investors. In the second stage proposals will be executable code and not signals or suggestions for a small set of key actors to follow through on.
+In the first stage, proposals will be voted on off-chain as a signal to the protocol administration committee of which updates to execute. The administration committee will consist of core team members and early contributers/investors. In the second stage, proposals will be executable code and not signals or suggestions for a small set of key actors to follow through on.
 
-Participation in governance begins with the $TENDER token, which can be locked up to obtain voting rights. Voting rights can also be delegated to other actors that have voting rights. Through this community members can off-load some of their responsabilities to other community members that are able to make better informed decisions. Participants will receive a portion of the "Governance fee" from each of the Tenderizers equal to their share of $TENDER tokens that are eligible for voting rights.
+Participation in governance begins with the $TENDER token, which can be locked up to obtain voting rights. Voting rights can also be delegated to other actors that have voting rights. Through this community, members can off-load some of their responsabilities to other community members that are able to make better informed decisions. Participants will receive a portion of the "Governance fee" from each of the Tenderizers equal to their share of the $TENDER tokens that are eligible for voting rights.
 
-We believe in rewarding active participation so incentives should be aligned accordingly, users that vote more often and with more conviction (measured by locking up voting power to proposals longer) should result in more rewards as they have more skin in the game.
+We believe in rewarding active participation, so incentives should be aligned accordingly. Users that vote more often and with more conviction (measured by locking up voting power to proposals longer) should result in more rewards, as they have more skin in the game.
 
 ### 6.2 $TENDER Token
 
-The $TENDER token is an ERC-20 token that empowers the management of the Tenderize protocol by the community. By locking up $TENDER tokens to acquire voting rights, holders gain the right to perform management duties for the protocol by creating or voting on proposals based on their own analysis and theses.
+The $TENDER token is an ERC-20 token that empowers the management of the Tenderize protocol by the community. By locking up $TENDER tokens to acquire voting rights, holders gain the right to perform management duties for the protocol by creating or voting on proposals, based on their own analysis and theses.
